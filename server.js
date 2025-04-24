@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config(); // For environment variables
 
-const PORT = process.env.PORT || 5000;
+const PORT = parseInt(process.env.PORT) || 5787;
 const recipients = ["prajapatidisha150407@gmail.com", "Nidhi.patel280912@gmail.com", "aayushipatel1586@gmail.com", "diyaparmar5170@gmail.com"];
 
 app.use(express.urlencoded({ extended: true }));
