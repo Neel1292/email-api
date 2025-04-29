@@ -26,7 +26,7 @@ app.post("/send-email", async (req, res) => {
     const { name, email, phone, subject, message } = req.body;
     
     const mailOptions = {
-        from: email, // User's email
+        from: `Portfolio Contact <${process.env.FROM_EMAIL}>`, // User's email
         to: recipients.join(","), // Your Gmail
         subject: subject,
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
